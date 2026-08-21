@@ -124,7 +124,7 @@ function updateTopLeader() {
             <img src="${leaderObj.avatar}" class="w-full h-full object-cover">
           </div>
           <div>
-            <div class="text-xs font-mono text-amber-400 font-bold uppercase tracking-wider">👑 NEXT WEEK INTERIM TEAM LEADER</div>
+            <div class="text-xs font-mono text-amber-400 font-bold uppercase tracking-wider">👑 NEXT WEEK TEAM LEADER</div>
             <div class="text-lg font-black text-white">${leaderObj.name} (${leaderObj.role})</div>
           </div>
         </div>
@@ -754,26 +754,26 @@ function updateLeaderboardTable() {
 
     return `
       <tr class="border-b border-slate-800/80 ${isTop ? 'bg-amber-500/10 font-bold' : ''}">
-        <td class="py-3 px-4 font-mono text-center">
+        <td class="py-3 px-2 sm:px-4 font-mono text-center">
           ${rank === 0 ? '<span class="text-amber-400 font-black text-base">🥇 #1</span>' :
             rank === 1 ? '<span class="text-gray-300 font-bold">🥈 #2</span>' :
             rank === 2 ? '<span class="text-amber-600 font-bold">🥉 #3</span>' :
             `<span class="text-gray-500">#${rank+1}</span>`}
         </td>
-        <td class="py-3 px-4">
-          <div class="flex items-center gap-3">
-            <img src="${player.avatar}" class="w-9 h-9 rounded-lg object-cover border border-slate-700">
+        <td class="py-3 px-2 sm:px-4">
+          <div class="flex items-center gap-2.5">
+            <img src="${player.avatar}" class="w-9 h-9 rounded-lg object-cover border border-slate-700 flex-shrink-0">
             <div>
-              <div class="text-white text-sm font-bold flex items-center gap-2">
-                ${player.name}
-                ${isTop ? '<span class="px-2 py-0.5 rounded text-[10px] bg-amber-400 text-slate-950 font-black">INTERIM LEADER</span>' : ''}
+              <div class="text-white text-sm font-bold flex flex-wrap items-center gap-1.5">
+                <span>${player.name}</span>
+                ${isTop ? '<span class="px-2 py-0.5 rounded text-[10px] bg-amber-400 text-slate-950 font-black whitespace-nowrap inline-block shadow">👑 TEAM LEADER</span>' : ''}
               </div>
               <div class="text-xs text-gray-400">${player.role}</div>
             </div>
           </div>
         </td>
-        <td class="py-3 px-4 text-center font-mono font-bold text-amber-400">${gameState.scores[key]} PTS</td>
-        <td class="py-3 px-4 text-center font-mono text-cyan-300">${gameState.wins[key]}</td>
+        <td class="py-3 px-2 sm:px-4 text-center font-mono font-bold text-amber-400">${gameState.scores[key]} PTS</td>
+        <td class="py-3 px-2 sm:px-4 text-center font-mono text-cyan-300">${gameState.wins[key]}</td>
       </tr>
     `;
   }).join("");

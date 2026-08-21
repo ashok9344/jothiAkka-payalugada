@@ -1,0 +1,10 @@
+{
+  "name": "jothi-akka-payalugada",
+  "version": "1.0.0",
+  "description": "Jothi Akka & Payalugada - Real Ludo Engine",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Building static site'",
+    "start": "node server.js"
+  }
+}

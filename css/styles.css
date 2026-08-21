@@ -441,14 +441,27 @@ button, a, input, select, textarea {
     padding: 12px !important;
   }
 
-  /* Responsive Font Sizes on Mobile */
-  h1 {
-    font-size: 2.25rem !important; /* 36px */
-    line-height: 1.15 !important;
+  /* Responsive Typography & Line Heights for Mobile */
+  h1, h2, h3, h4, h5, h6, span, p {
+    line-height: 1.35 !important;
+    word-break: break-word;
   }
 
-  h2 {
-    font-size: 1.75rem !important; /* 28px */
+  /* Specific Heading Scalings */
+  h1 {
+    font-size: 2.25rem !important; /* 36px */
+    line-height: 1.2 !important;
+  }
+
+  h2.text-xs, h2.font-mono, span.text-xs {
+    font-size: 0.75rem !important; /* 12px */
+    line-height: 1.4 !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  h3.text-3xl, h3.text-4xl, h3.text-5xl {
+    font-size: 1.65rem !important; /* 26px */
+    line-height: 1.25 !important;
   }
 
   /* Soundboard Buttons on Mobile */
